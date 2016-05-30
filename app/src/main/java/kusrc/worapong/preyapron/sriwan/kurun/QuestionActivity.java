@@ -43,6 +43,7 @@ public class QuestionActivity extends AppCompatActivity {
 
         resultStrings = getIntent().getStringArrayExtra("Result");
         userGoldAnInt = getIntent().getIntExtra("Gold", 0);
+        Log.d("30MayV1", "Gold ที่รับมาได้ ==> " + resultStrings[8]);
 
         //Bind Widget
         bindWidget();

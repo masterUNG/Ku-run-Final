@@ -352,6 +352,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onClick(DialogInterface dialogInterface, int i) {
 
                 Intent intent = new Intent(MapsActivity.this, QuestionActivity.class);
+                intent.putExtra("Result", resultStrings);
                 intent.putExtra("Base", strMessage);
                 intent.putExtra("Icon", intIcon);
                 startActivity(intent);
