@@ -157,9 +157,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         locationManager.removeUpdates(locationListener);
 
-        //นี่คือค่าเริ่มต้นของ Map ถ้าไม่ได้ต่อ GPS หรือ Net
-        myLatADouble = 13.668066;
-        myLngADouble = 100.622454;
+        //นี่คือค่าเริ่มต้นของ Map ถ้าไม่ได้ต่อ GPS หรือ Net กำหนด ริมมหาลัย
+        myLatADouble = 13.12405607;
+        myLngADouble = 100.91727734;
 
         Location networkLocation = findLocation(LocationManager.NETWORK_PROVIDER, "Cannot Connected Internet");
         if (networkLocation != null) {
