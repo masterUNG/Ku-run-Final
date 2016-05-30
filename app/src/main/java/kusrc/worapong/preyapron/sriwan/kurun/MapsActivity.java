@@ -44,7 +44,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private String[] resultStrings;
     private double[] buildLatDoubles = {13.12362768,13.12512183,13.12090057,13.11748381};
     private double[] buildLngDoubles = {100.91835022,100.9192729,100.91940165,100.92124701};
+    private boolean[] baseStatus = {true, true, true, true};
     private boolean myStatus = true;
+    private int indexBuildAnInt = 0;
+    String[] baseStrings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -244,7 +247,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Create Marker Building
 
 
-        String[] baseStrings = {"ด่านที่ 1", "ด่านที่ 2", "ด่านที่ 3", "ด่านที่ 4"};
+        baseStrings =new String[] {"ด่านที่ 1", "ด่านที่ 2", "ด่านที่ 3", "ด่านที่ 4"};
         int[] iconBaseInts = {5,6,7,8};
 
         for (int i=0;i<baseStrings.length;i++) {
@@ -315,15 +318,29 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
-        //Find Distance
-        double myDistance = distance(myLatADouble, myLngADouble,
-                buildLatDoubles[0], buildLngDoubles[0]);
-        Log.d("7MayV1", "myDistance กับ ฐานที่ 1 ==> " + myDistance);
-        if (myDistance <= 10 && myStatus) {
-            myAlert("ฐานที่ 1", R.drawable.base1);
-        }
+
+//        ***********************************************************
+//        Find Distance
+//        ***********************************************************
+
+        checkBaseDistance();
 
     }   // update
+
+    private void checkBaseDistance() {
+
+        double myDistance = distance(myLatADouble, myLngADouble,
+                buildLatDoubles[indexBuildAnInt], buildLngDoubles[indexBuildAnInt]);
+
+        Log.d("30MayV1", "ระยะห่าง กับ " + baseStrings[indexBuildAnInt] + " ==>> " + myDistance);
+
+        if ((myDistance <= 10 && myStatus) && baseStatus[indexBuildAnInt]) {
+            myAlert(baseStrings[indexBuildAnInt], R.drawable.base1);
+            baseStatus[indexBuildAnInt] = false;
+        }
+
+
+    }   // checkBaseDistance
 
     private void myAlert(final String strMessage,
                          final int intIcon) {
