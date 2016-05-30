@@ -122,6 +122,7 @@ public class ShowScore extends AppCompatActivity {
                 }
             });
 
+            resultStrings[8] = Integer.toString(userGoldAnInt);
             Intent intent = new Intent(ShowScore.this, MapsActivity.class);
             intent.putExtra("Result", resultStrings);
             intent.putExtra("Status", false);

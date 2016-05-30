@@ -46,7 +46,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private double[] buildLngDoubles = {100.91835022,100.9192729,100.91940165,100.92124701};
     private boolean[] baseStatus = {true, true, true, true};
     private boolean myStatus = true;
-    private int indexBuildAnInt = 0;
+    private int indexBuildAnInt;
     String[] baseStrings;
 
     @Override
@@ -65,6 +65,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         criteria.setAltitudeRequired(false);
         criteria.setBearingRequired(false);
         resultStrings = getIntent().getStringArrayExtra("Result");
+
+        indexBuildAnInt = Integer.parseInt(resultStrings[8]);
+        Log.d("30MayV1", "ฐานที่ต้องลุย ฐานที่ ==> " + indexBuildAnInt);
 
     }   // Main Method
 
