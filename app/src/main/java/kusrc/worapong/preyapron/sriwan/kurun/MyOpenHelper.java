@@ -20,7 +20,8 @@ public class MyOpenHelper extends SQLiteOpenHelper{
             "Year text, " +
             "User text, " +
             "Password text, " +
-            "Avata text);";
+            "Avata text," +
+            "Gold text);";
 
     public MyOpenHelper(Context context) {
         super(context, database_name, null, database_version);

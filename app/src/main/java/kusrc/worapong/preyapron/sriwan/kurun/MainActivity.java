@@ -194,9 +194,11 @@ public class MainActivity extends AppCompatActivity {
                             String strUser = jsonObject.getString(MyManage.column_User);
                             String strPassword = jsonObject.getString(MyManage.column_Password);
                             String strAvata = jsonObject.getString(MyManage.column_Avata);
+                            String strGold = jsonObject.getString(MyManage.column_gold);
+
 
                             myManage.addUser(strName, strSurname, strIDstudent,
-                                    strYear, strUser, strPassword, strAvata);
+                                    strYear, strUser, strPassword, strAvata, strGold);
 
                             break;
                     }   // switch
@@ -220,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void testAddValue() {
-        myManage.addUser("name", "sur", "id", "2016", "user", "12345", "3");
+        myManage.addUser("name", "sur", "id", "2016", "user", "12345", "3", "0");
     }
 
     public void clickSignUpMain(View view) {

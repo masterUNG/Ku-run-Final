@@ -22,6 +22,7 @@ public class MyManage {
     public static final String column_User = "User";
     public static final String column_Password = "Password";
     public static final String column_Avata = "Avata";
+    public static final String column_gold = "Gold";
 
     public MyManage(Context context) {
 
@@ -54,7 +55,8 @@ public class MyManage {
                         String strYear,
                         String strUser,
                         String strPassword,
-                        String strAvata) {
+                        String strAvata,
+                        String stGold) {
 
         ContentValues contentValues = new ContentValues();
         contentValues.put(column_Name, strName);
@@ -64,6 +66,7 @@ public class MyManage {
         contentValues.put(column_User, strUser);
         contentValues.put(column_Password, strPassword);
         contentValues.put(column_Avata, strAvata);
+        contentValues.put(column_gold, stGold);
 
         return writeSqLiteDatabase.insert(user_table, null, contentValues);
     }

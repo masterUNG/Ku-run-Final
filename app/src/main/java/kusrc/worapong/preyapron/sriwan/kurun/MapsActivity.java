@@ -319,10 +319,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
 
-//        ***********************************************************
-//        Find Distance
-//        ***********************************************************
-
         checkBaseDistance();
 
     }   // update
