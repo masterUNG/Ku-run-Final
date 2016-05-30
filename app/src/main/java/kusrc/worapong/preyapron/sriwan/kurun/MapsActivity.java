@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
+import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -70,6 +71,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Log.d("30MayV1", "ฐานที่ต้องลุย ฐานที่ ==> " + indexBuildAnInt);
 
     }   // Main Method
+
+    public void clickHistoryListview(View view) {
+        startActivity(new Intent(MapsActivity.this, HistoryListView.class));
+    }
 
     //Create Inner Class
     public class SynLatLngAllUser extends AsyncTask<Void, Void, String> {

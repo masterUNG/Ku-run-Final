@@ -30,7 +30,8 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".QuestionActivity" />
-        <activity android:name=".ShowScore"></activity>
+        <activity android:name=".ShowScore" />
+        <activity android:name=".HistoryListView"></activity>
     </application>
 
 </manifest>
