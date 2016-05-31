@@ -31,7 +31,8 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".QuestionActivity" />
         <activity android:name=".ShowScore" />
-        <activity android:name=".HistoryListView"></activity>
+        <activity android:name=".HistoryListView" />
+        <activity android:name=".ShowOff"></activity>
     </application>
 
 </manifest>

@@ -72,6 +72,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }   // Main Method
 
+    public void clickShowOff(View view) {
+        startActivity(new Intent(MapsActivity.this, ShowOff.class));
+    }
+
     public void clickHistoryListview(View view) {
         startActivity(new Intent(MapsActivity.this, HistoryListView.class));
     }

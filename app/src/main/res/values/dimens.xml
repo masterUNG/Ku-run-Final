@@ -9,5 +9,6 @@
     <dimen name="edit">230dp</dimen>
     <dimen name="my_margin">20dp</dimen>
     <dimen name="iconhistory">100dp</dimen>
+    <dimen name="iconsmall">48dp</dimen>
 
 </resources>

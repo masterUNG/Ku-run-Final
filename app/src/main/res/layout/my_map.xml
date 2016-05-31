@@ -22,7 +22,8 @@
             android:layout_height="wrap_content"
             android:text="Show Off"
             android:id="@+id/button7"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:onClick="clickShowOff" />
     </LinearLayout>
 
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
