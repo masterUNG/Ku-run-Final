@@ -54,7 +54,11 @@ public class ShowScore extends AppCompatActivity {
 
         if (Integer.parseInt(scoreString) >= 3) {
             detailTextView.setText("ยินดีด้วยคุณได้ไปต่อ");
-            userGoldAnInt += 1;
+            if (userGoldAnInt == 3) {
+                userGoldAnInt = 0;
+            } else {
+                userGoldAnInt += 1;
+            }
             bolStatus = true;
         } else {
             detailTextView.setText("ลองใหม่อีกครั้ง");
